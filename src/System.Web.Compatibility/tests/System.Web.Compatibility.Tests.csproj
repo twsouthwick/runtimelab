@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net5.0-windows</TargetFrameworks>
     <RollForward>Major</RollForward>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Set ReferenceSourceTarget to workaround https://github.com/dotnet/sdk/issues/12301 -->
-    <!-- Treat the ProjectReference as a regular Reference by setting ReferenceOutputAssembly and OutputItemType 
+    <!-- Treat the ProjectReference as a regular Reference by setting ReferenceOutputAssembly and OutputItemType
          so that it is fed into conflict-resolution.
          Workaround for https://github.com/dotnet/sdk/issues/2674 -->
-    <ProjectReference Include="..\src\System.Web.Compatibility.csproj" 
-                      ReferenceSourceTarget="NotAProjectReference" 
-                      ReferenceOutputAssembly="false" 
+    <ProjectReference Include="..\src\System.Web.Compatibility.csproj"
+                      ReferenceSourceTarget="NotAProjectReference"
+                      ReferenceOutputAssembly="false"
                       OutputItemType="Reference" />
   </ItemGroup>
 
