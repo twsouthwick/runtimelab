@@ -1,0 +1,5 @@
+﻿<Project>
+  <PropertyGroup>
+    <ShowSystemWebShimWarning>true</ShowSystemWebShimWarning>
+  </PropertyGroup>
+</Project>

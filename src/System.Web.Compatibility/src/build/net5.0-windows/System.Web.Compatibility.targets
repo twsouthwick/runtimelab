@@ -1,0 +1,5 @@
+﻿<Project>
+  <Target Name="ShimWarning" Condition="$(ShowSystemWebShimWarning)" BeforeTargets="BeforeBuild">
+    <Warning Text="This System.Web shim should not be used for long term. It is intended to help with the upgrade process to ASP.NET Core" />
+  </Target>
+</Project>

@@ -84,10 +84,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="build\net48\System.Web.Compatibility.props" Pack="true" PackagePath="build/net48" />
-    <None Include="build\net48\System.Web.Compatibility.targets" Pack="true" PackagePath="build/net48" />
-    <None Include="build\net5.0\System.Web.Compatibility.props" Pack="true" PackagePath="build/net5.0" />
-    <None Include="build\net5.0\System.Web.Compatibility.targets" Pack="true" PackagePath="build/net5.0" />
+    <None Include="build\net45\System.Web.Compatibility.props" Pack="true" PackagePath="build/net45" />
+    <None Include="build\net45\System.Web.Compatibility.targets" Pack="true" PackagePath="build/net45" />
+
+    <None Include="build\net5.0-windows\System.Web.Compatibility.props" Pack="true" PackagePath="build/net5.0-windows" />
+    <None Include="build\net5.0-windows\System.Web.Compatibility.targets" Pack="true" PackagePath="build/net5.0-windows" />
 
     <None Include="_._" Pack="true" PackagePath="ref/$(TargetFramework)" />
   </ItemGroup>
