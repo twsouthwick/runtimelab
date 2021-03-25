@@ -1,8 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net5.0-windows</TargetFrameworks>
+    <TargetFrameworks>net5.0-windows</TargetFrameworks>
     <RollForward>Major</RollForward>
+    <NoWarn>$(NoWarn);SYSWEB_HTTPCONTEXT;SYSWEB_HTTPCONTEXT_ITEMS;SYSWEB_HTTPCONTEXT_CURRENT</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

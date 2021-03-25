@@ -8,9 +8,9 @@
 
     <!-- set version higher than that provided by framework -->
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
-    <TargetFrameworks>net5.0-windows;netcoreapp3.1;netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>net5.0-windows</TargetFrameworks>
 
-    <UseWindowsForms Condition=" '$(TargetFramework)' == 'net5.0-windows' OR '$(TargetFramework)' == 'netcoreapp3.1'" >true</UseWindowsForms>
+    <UseWindowsForms Condition=" '$(TargetFramework)' == 'net5.0-windows' OR '$(TargetFramework)' == 'netcoreapp3.1'">true</UseWindowsForms>
 
     <!-- sign the assembly with the same key as System.Web -->
     <StrongNameKeyId>Microsoft</StrongNameKeyId>
@@ -25,6 +25,8 @@
     <AssemblySearchPaths>$(Net48Ref);$(AssemblySearchPaths)</AssemblySearchPaths>
 
     <NoWarn>$(NoWarn);CS0618;CS3021;NU5131;CS0672;SYSLIB0000;SYSLIB0003</NoWarn>
+
+    <NoWarn>$(NoWarn);SYSWEB_HTTPCONTEXT</NoWarn>
   </PropertyGroup>
 
   <ItemDefinitionGroup>
@@ -55,7 +57,7 @@
 
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0-windows' OR '$(TargetFramework)' == 'netcoreapp3.1'" >
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0-windows' OR '$(TargetFramework)' == 'netcoreapp3.1'">
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="System.Data.SqlClient" Version="4.1.0.0" />
   </ItemGroup>
@@ -65,10 +67,7 @@
 
     <!-- we don't want to reference netcoreapp reference assemblies
          but need System.Web.HttpUtility for a type-forward target -->
-    <PackageReference Update="Microsoft.NETCore.App" ExcludeAssets="Compile" GeneratePathProperty="true" />
-
-    <!-- Bring in only System.Web.HttpUtility from .NETCore so that we can forward to it -->
-    <Reference Include="$(PkgMicrosoft_NETCore_App)\ref\netcoreapp2.1\System.Web.HttpUtility.dll" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>

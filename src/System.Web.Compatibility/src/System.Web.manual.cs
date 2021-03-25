@@ -2,37 +2,13 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using System.Collections;
 using System.IO;
 using System.Runtime.CompilerServices;
-using System.Security.Principal;
 
 [assembly: TypeForwardedTo(typeof(System.Web.HttpUtility))]
 
 namespace System.Web
 {
-    public partial class HttpContext
-    {
-        public static HttpContext Current
-        {
-            get => null;
-            set => throw new PlatformNotSupportedException(SR.PlatformNotSupportedSystemWeb);
-        }
-
-        public IDictionary Items
-        {
-            get => null;
-        }
-
-        public IPrincipal User
-        {
-            get => null;
-            set => throw new PlatformNotSupportedException(SR.PlatformNotSupportedSystemWeb);
-        }
-
-        public HttpContext(HttpRequest request, HttpResponse response) { }
-    }
-
     public sealed partial class HttpRequest
     {
         public HttpRequest(string filename, string url, string queryString) { }
