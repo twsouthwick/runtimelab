@@ -35,7 +35,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.DotNet.GenAPI" PrivateAssets="All" Version="$(MicrosoftDotNetGenAPIVersion)" />
 
-
     <!-- we'll use the .NETFramework reference assemblies to build from so we
          don't need to worry about System.Web's dependent types that are not
          present on .NETCore -->
@@ -85,7 +84,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="_._" Pack="true" PackagePath="ref/$(TargetFramework)" />
+    <None Include="build\net48\System.Web.Compatibility.props" Pack="true" PackagePath="build/net48" />
+    <None Include="build\net48\System.Web.Compatibility.targets" Pack="true" PackagePath="build/net48" />
+    <None Include="build\net5.0\System.Web.Compatibility.props" Pack="true" PackagePath="build/net5.0" />
+    <None Include="build\net5.0\System.Web.Compatibility.targets" Pack="true" PackagePath="build/net5.0" />
+
+    <None Include="_._" Pack="true" PackagePath="ref/$(TargetFramework)" />
   </ItemGroup>
 
   <Target Name="ResolveMatchingContract">
