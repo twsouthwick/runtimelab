@@ -43,11 +43,10 @@ namespace System.Web
             get => _context.Features.Get<ISessionFeature>()?.GetSessionState(_context);
         }
 
-        [Obsolete("This constructor does not do anything", error: true, DiagnosticId = "SYSWEB_HTTPCONTEXT")]
+        [Obsolete("Not supported", error: true, DiagnosticId = "SYSWEB_HTTPCONTEXT_USER")]
         public IPrincipal User
         {
             get => _context.User;
-            [Obsolete]
             set => throw new PlatformNotSupportedException(SR.PlatformNotSupportedSystemWeb);
         }
 

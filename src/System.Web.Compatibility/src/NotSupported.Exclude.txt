@@ -2,6 +2,9 @@
 T:System.Web.HttpUtility
 
 # implemented
+T:System.Web.HttpContextWrapper
+
+# implemented
 P:System.Web.HttpContext.Current
 P:System.Web.HttpContext.Items
 P:System.Web.HttpContext.Session
