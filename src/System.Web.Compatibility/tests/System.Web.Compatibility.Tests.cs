@@ -16,22 +16,6 @@ namespace System.Web.Compatibility.Tests
         }
 
         [Fact]
-        public void HttpContextItemsGetDoesNotThrow()
-        {
-            var context = new HttpContext(new HttpRequest(null, null, null), new HttpResponse(null));
-
-            Assert.Null(context.Items);
-        }
-
-        [Fact]
-        public void HttpContextUserGetDoesNotThrow()
-        {
-            var context = new HttpContext(new HttpRequest(null, null, null), new HttpResponse(null));
-
-            Assert.Null(context.User);
-        }
-
-        [Fact]
         public void HostingEnvironmentApplicationPathGetDoesNotThrow()
         {
             Assert.Null(HostingEnvironment.ApplicationPath);

@@ -2,36 +2,9 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using System.IO;
 using System.Runtime.CompilerServices;
 
 [assembly: TypeForwardedTo(typeof(System.Web.HttpUtility))]
-
-namespace System.Web
-{
-    public sealed partial class HttpRequest
-    {
-        public HttpRequest(string filename, string url, string queryString) { }
-    }
-
-    public sealed partial class HttpResponse
-    {
-        public HttpResponse(TextWriter writer) { }
-    }
-}
-
-namespace System.Web.Hosting
-{
-    public partial class HostingEnvironment
-    {
-        public static string ApplicationPath => null;
-        public static string ApplicationVirtualPath => null;
-        public static bool IsHosted => false;
-        public static string SiteName => null;
-
-        public static string MapPath(string virtualPath) => null;
-    }
-}
 
 namespace System.Web.UI
 {

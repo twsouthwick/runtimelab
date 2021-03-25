@@ -27,4 +27,9 @@
     <PackageReference Update="xunit" Version="$(XunitVersion)" />
     <PackageReference Update="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualStudioVersion)" PrivateAssets="all" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);SYSWEB_HTTPCONTEXT;SYSWEB_HTTPCONTEXT_CURRENT;SYSWEB_HTTPCONTEXT_ITEMS</NoWarn>
+  </PropertyGroup>
+
 </Project>

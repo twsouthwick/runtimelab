@@ -25,8 +25,6 @@
     <AssemblySearchPaths>$(Net48Ref);$(AssemblySearchPaths)</AssemblySearchPaths>
 
     <NoWarn>$(NoWarn);CS0618;CS3021;NU5131;CS0672;SYSLIB0000;SYSLIB0003</NoWarn>
-
-    <NoWarn>$(NoWarn);SYSWEB_HTTPCONTEXT</NoWarn>
   </PropertyGroup>
 
   <ItemDefinitionGroup>
